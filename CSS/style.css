@@ -1,0 +1,226 @@
+/* RESET & BASICS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0f0f0f;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* NAVIGATION */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: #000;
+    border-bottom: 2px solid #ff4500;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-family: 'Russo One', sans-serif;
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #ff4500;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    margin-left: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff4500;
+}
+
+/* HEADER HERO */
+header {
+    height: 80vh;
+    position: relative;
+    background: url('https://images.unsplash.com/photo-1485463611174-f302f6a5c1c9?q=80&w=1500') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    font-family: 'Russo One', sans-serif;
+    font-size: clamp(50px, 8vw, 100px);
+    margin-bottom: 10px;
+    text-shadow: 4px 4px 0px #ff4500;
+}
+
+.hero-content p {
+    letter-spacing: 10px;
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+.btn-main {
+    padding: 15px 40px;
+    background: #ff4500;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn-main:hover {
+    background: white;
+    color: #ff4500;
+}
+
+/* SECTIONS & CARDS */
+.container {
+    padding: 80px 50px;
+}
+
+.bg-dark {
+    background-color: #161616;
+}
+
+.section-title {
+    font-family: 'Russo One', sans-serif;
+    font-size: 32px;
+    margin-bottom: 40px;
+    border-left: 5px solid #ff4500;
+    padding-left: 15px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: #222;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: 0.3s;
+    border: 1px solid #333;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: #ff4500;
+}
+
+.card-img {
+    height: 200px;
+    background-size: contain; /* L'image s'affiche en entier sans être coupée */
+    background-position: center; /* L'image est centrée horizontalement et verticalement */
+    background-repeat: no-repeat; /* Évite que l'image ne se répète si elle est petite */
+    background-color: #1a1a1a; /* Ajoute un fond sombre si l'image ne remplit pas tout */
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-body h3 {
+    margin-bottom: 10px;
+    color: #ff4500;
+}
+
+.spec {
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 0.8rem;
+    background: #333;
+    padding: 5px 10px;
+    border-radius: 3px;
+    color: #ff4500;
+    font-weight: bold;
+}
+.detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Deux colonnes : image à gauche, texte à droite */
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.img-detail {
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid #ff4500;
+}
+
+.specs-box {
+    background: #222;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.specs-box h3 {
+    color: #ff4500;
+    margin-bottom: 20px;
+    font-family: 'Russo One', sans-serif;
+}
+
+.specs-box ul {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.specs-box li {
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
+}
+
+/* Mobile : on remet sur une seule colonne */
+@media (max-width: 768px) {
+    .detail-grid {
+        grid-template-columns: 1fr;
+    }
+}
+footer {
+    background: #000;
+    padding: 50px;
+    text-align: center;
+    border-top: 2px solid #ff4500;
+    margin-top: 50px;
+}
+
+.footer-content p {
+    color: #888;
+    margin: 20px 0;
+    font-size: 0.9rem;
+}
